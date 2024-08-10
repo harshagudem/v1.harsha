@@ -64,9 +64,10 @@ const Contact = () => {
         Let's get in touch if you have any relevant roles for me!
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
-        Mail Me!
-      </a>
+      <a className="email-link" href="mailto:harsha.gudem2@gmail.com?subject=Hello&body=I would like to discuss...">
+  Mail Me!
+</a>
+
     </StyledContactSection>
   );
 };

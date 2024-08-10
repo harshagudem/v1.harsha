@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
+import { CSSTransition } from 'react-transition-group';
 import { srConfig } from '@config';
 import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
@@ -17,7 +16,6 @@ const StyledJobsSection = styled.section`
       display: block;
     }
 
-    // Prevent container from jumping
     @media (min-width: 700px) {
       min-height: 340px;
     }
@@ -165,29 +163,64 @@ const StyledTabPanel = styled.div`
 `;
 
 const Jobs = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              company
-              location
-              range
-              url
-            }
-            html
-          }
-        }
-      }
-    }
-  `);
-
-  const jobsData = data.jobs.edges;
+  const jobsData = [
+    {
+      title: 'Front-End Developer',
+      company: 'CrashPad',
+      location: 'Salt Lake City, UT',
+      range: 'January 2024 - August 2024',
+      url: '',
+      description: `
+        <ul>
+          <li>Developed a responsive web design and mobile app for booking unique RV accommodations and managing RV properties, incorporating interactive maps, user authentication, and secure payments, resulting in a 50% increase in bookings.</li>
+          <li>Designed and implemented a comprehensive registration and booking management system, ensuring seamless UI/UX and reducing user drop-off by 30%.</li>
+          <li>Collaborated with the backend team using ReactJS, JavaScript, REST APIs, NodeJS, SQL, TypeScript, and Git, enhancing booking management efficiency by 40%.</li>
+          <li>Utilized AWS for web hosting, S3 buckets for media storage, integrated Google Analytics for user insights, implemented JWT for session management, and OAuth for authentication, improving project delivery speed by 25%.</li>
+        </ul>
+      `,
+    },
+    {
+      title: 'Graduate Teaching Assistant',
+      company: 'University of Utah',
+      location: 'Salt Lake City, UT',
+      range: 'August 2023 - Present',
+      url: 'https://www.utah.edu',
+      description: `
+        <ul>
+          <li>Assisting in teaching web development courses, providing support to students in mastering modern web technologies.</li>
+          <li>Developed and presented projects that enhanced students' skills, resulting in a 40% improvement in overall performance.</li>
+        </ul>
+      `,
+    },
+   
+    {
+      title: 'Software Engineer',
+      company: 'Total Infra & Mining Solutions',
+      location: 'Hyderabad, India',
+      range: 'June 2018 - June 2020',
+      url: 'https://www.total24x7.com/shop/',
+      description: `
+        <ul>
+          <li>Developed and maintained responsive web applications using React and Node.js.</li>
+          <li>Improved system performance by optimizing front-end components, leading to a 40% increase in sales.</li>
+          <li>Collaborated with cross-functional teams to define and implement innovative solutions for improved user experience.</li>
+        </ul>
+      `,
+    },
+    {
+      title: 'Information Technology Intern',
+      company: 'South Central Railway',
+      location: 'India',
+      range: 'June 2020 - January 2021',
+      url: 'https://scr.indianrailways.gov.in/',
+      description: `
+        <ul>
+          <li>Contributed significantly to the creation and upkeep of responsive front-end design user interfaces for a mobile railway ticketing system, using HTML, CSS, and modern JavaScript concepts, resulting in a 35% improvement in system responsiveness and user satisfaction.</li>
+          <li>Provided frontline support to colleagues, identifying problems and assisting with technical troubleshooting, bug fix analysis, and frontend-related issues. Conducted seminars on safe internet practices, leading to a 25% reduction in frontend-related incidents.</li>
+        </ul>
+      `,
+    },
+  ];
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -208,20 +241,16 @@ const Jobs = () => {
       tabs.current[tabFocus].focus();
       return;
     }
-    // If we're at the end, go to the start
     if (tabFocus >= tabs.current.length) {
       setTabFocus(0);
     }
-    // If we're at the start, move to the end
     if (tabFocus < 0) {
       setTabFocus(tabs.current.length - 1);
     }
   };
 
-  // Only re-run the effect if tabFocus changes
   useEffect(() => focusTab(), [tabFocus]);
 
-  // Focus on tabs when using up & down arrow keys
   const onKeyDown = e => {
     switch (e.key) {
       case KEY_CODES.ARROW_UP: {
@@ -249,58 +278,50 @@ const Jobs = () => {
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
           {jobsData &&
-            jobsData.map(({ node }, i) => {
-              const { company } = node.frontmatter;
-              return (
-                <StyledTabButton
-                  key={i}
-                  isActive={activeTabId === i}
-                  onClick={() => setActiveTabId(i)}
-                  ref={el => (tabs.current[i] = el)}
-                  id={`tab-${i}`}
-                  role="tab"
-                  tabIndex={activeTabId === i ? '0' : '-1'}
-                  aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}>
-                  <span>{company}</span>
-                </StyledTabButton>
-              );
-            })}
+            jobsData.map(({ company }, i) => (
+              <StyledTabButton
+                key={i}
+                isActive={activeTabId === i}
+                onClick={() => setActiveTabId(i)}
+                ref={el => (tabs.current[i] = el)}
+                id={`tab-${i}`}
+                role="tab"
+                tabIndex={activeTabId === i ? '0' : '-1'}
+                aria-selected={activeTabId === i ? true : false}
+                aria-controls={`panel-${i}`}>
+                <span>{company}</span>
+              </StyledTabButton>
+            ))}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
 
         <StyledTabPanels>
           {jobsData &&
-            jobsData.map(({ node }, i) => {
-              const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+            jobsData.map(({ title, url, company, range, description }, i) => (
+              <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
+                <StyledTabPanel
+                  id={`panel-${i}`}
+                  role="tabpanel"
+                  tabIndex={activeTabId === i ? '0' : '-1'}
+                  aria-labelledby={`tab-${i}`}
+                  aria-hidden={activeTabId !== i}
+                  hidden={activeTabId !== i}>
+                  <h3>
+                    <span>{title}</span>
+                    <span className="company">
+                      &nbsp;@&nbsp;
+                      <a href={url} className="inline-link">
+                        {company}
+                      </a>
+                    </span>
+                  </h3>
 
-              return (
-                <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
-                  <StyledTabPanel
-                    id={`panel-${i}`}
-                    role="tabpanel"
-                    tabIndex={activeTabId === i ? '0' : '-1'}
-                    aria-labelledby={`tab-${i}`}
-                    aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}>
-                    <h3>
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                  <p className="range">{range}</p>
 
-                    <p className="range">{range}</p>
-
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </StyledTabPanel>
-                </CSSTransition>
-              );
-            })}
+                  <div dangerouslySetInnerHTML={{ __html: description }} />
+                </StyledTabPanel>
+              </CSSTransition>
+            ))}
         </StyledTabPanels>
       </div>
     </StyledJobsSection>

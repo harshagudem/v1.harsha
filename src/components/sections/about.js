@@ -18,6 +18,7 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
@@ -46,6 +47,7 @@ const StyledText = styled.div`
     }
   }
 `;
+
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -125,8 +127,21 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Market Research', 'Data Analysis', 'Brand Management', 'Digital Marketing', 
-  'SPSS', 'Tableau', 'MS Office', 'Python'];
+  const skills = [
+    'JavaScript', 
+    'React', 
+    'TypeScript', 
+    'Node.js',
+    'HTML', 
+    'CSS',
+    'Tailwind CSS', 
+    'WordPress',
+    'MongoDB', 
+    'MySQL', 
+    'Git',
+    'AWS', 
+    'UI/UX Design'
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,32 +151,28 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            With a core specialization in Marketing &amp; Strategy, I've orchestrated impactful
-             strategies in brand perceptions during my MBA summer internship for {' '}
-             <a href="https://www.tatastructura.com">Tata Structura</a> {' '} at{' '} 
-             <a href="https://drive.google.com/file/d/1xhGTFz7pe6kP7bZ4peDgJ7hlG630K8rz/view?usp=sharing">Tata Steel</a>.
+              I'm Harshavardhan Gudem, a software engineer with over 2 years of experience in front-end development and web applications. 
+              I have led projects utilizing modern front-end technologies and have developed key internal software applications, 
+              resulting in significant performance enhancements.
             </p>
 
             <p>
-            I also spearheaded employer branding initiatives for {' '}
-            <a href="https://drive.google.com/file/d/1w-uN9jb86pxFXPYMDu_78P-d1CZJAx3V/view?usp=sharing">
-              Aditya Birla Fashion and Retail</a>, {' '} resulting in a remarkable 37% surge in consumer engagement 
-              during my remote live project as part of my MBA journey.
+              My expertise lies in creating responsive and optimized web applications, ensuring higher user satisfaction 
+              and seamless user experiences. During my tenure at Total Infra & Mining Solutions, I implemented React components 
+              and integrated RESTful APIs to enhance usability, contributing to a 40% increase in sales.
             </p>
 
             <p>
-            During my tenure at {' '} <a href="https://www.amdocs.com">Amdocs</a>, {' '} 
-            where I served as a Software Developer, I had the honor of being selected as one of 16 elite {' '} 
-            <a href="https://drive.google.com/file/d/16BGu5InZZDGCtoWas560ezwKsgVBKbI9/view?usp=sharing">Innovation Agents</a>.
+              As a Graduate Teaching Assistant at the University of Utah, I have been developing and presenting web application projects, 
+              helping students improve their web development skills by 40%.
             </p>
 
             <p>
-            Moreover, my role as a {' '} <a href="https://drive.google.com/file/d/1iRTZfE7v5Y99BYZVxevaGBVtF90t-TOb/view?usp=sharing">
-              Placement Coordinator</a> {' '} at IIM Rohtak saw me cultivate over 30 new corporate relationships, culminating in a 
-              remarkable 42% boost in campus placements.
+              I am continuously learning and expanding my skill set, which includes a strong foundation in JavaScript, React, Typescript,Node JS 
+              and various front-end frameworks and tools.
             </p>
 
-            <p>My skills are not limited to this list!</p>
+            <p>Here are a few of the technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">
@@ -173,7 +184,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/ProfileImage.jpeg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
