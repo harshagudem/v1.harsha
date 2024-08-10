@@ -1,6 +1,7 @@
 {
+  "homepage" : "https://harshagudem.github.io/v1.harsha",
   "name": "v2",
-  "description": "v1.harsha-portfolio",
+  "description": "v1.harsha",
   "version": "1.0.0",
   "author": "Harshavardhan Gudem <harsha.gudem2@gmail.com>",
   "repository": {
@@ -17,9 +18,10 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
+    "predeploy" :"npm run build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b main",
+    "deploy": " gh-pages -d build",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -62,21 +64,21 @@
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.1.12"
   },
-"devDependencies": {
-  "@babel/core": "^7.25.2",
-  "@babel/eslint-parser": "^7.25.1",
-  "@babel/preset-react": "^7.24.7",
-  "@upstatement/eslint-config": "^3.0.0",
-  "@upstatement/prettier-config": "^1.1.0",
-  "babel-preset-gatsby": "^3.13.2",
-  "eslint": "^8.0.0", 
-  "eslint-config-prettier": "^9.1.0",
-  "eslint-plugin-jsx-a11y": "^6.9.0",
-  "eslint-plugin-react": "^7.35.0",
-  "gatsby-remark-code-titles": "^1.1.0",
-  "husky": "^9.1.4",
-  "lint-staged": "^15.2.8",
-  "prettier": "^3.3.3"
-}
-
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-react": "^7.24.7",
+    "@upstatement/eslint-config": "^3.0.0",
+    "@upstatement/prettier-config": "^1.1.0",
+    "babel-preset-gatsby": "^3.13.2",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
+    "prettier": "^3.3.3"
+  }
 }
