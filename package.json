@@ -6,7 +6,7 @@
   "author": "Harshavardhan Gudem <harsha.gudem2@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/harshagudem"
+    "url": "https://github.com/harshagudem/v1.harsha.git"
   },
   "keywords": [
     "gatsby"
@@ -21,7 +21,7 @@
     "predeploy" :"npm run build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": " gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
