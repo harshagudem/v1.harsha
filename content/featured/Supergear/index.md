@@ -7,7 +7,7 @@ github: 'https://github.com/harshagudem/Supergear'
 tech:
   - React Js
   - Typescript
-  - Tailwind CSs
+  - Tailwind CSS
   - Firebase
   
 ---
