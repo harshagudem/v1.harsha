@@ -3,7 +3,7 @@ date: '2'
 title: 'Tesla Clone'
 cover: './Tesla.png'
 github: 'https://github.com/harshagudem/Tesla2024_clone'
-# external: 'https://docs.google.com/presentation/d/1VBxFohznvvVg8Kxf5CPwx2UAgbv2ReTx6vzcp8A7u70/edit?usp=sharing'
+external: "https://tesla2024-clone.vercel.app/"
 tech:
   - React JS
   - CSS
