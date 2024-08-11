@@ -21,44 +21,34 @@ const StyledJobsSection = styled.section`
     }
   }
 `;
-
 const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
-  width: max-content;
+  display: flex;
+  justify-content: space-evenly; 
+  flex-wrap: wrap; 
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
 
   @media (max-width: 600px) {
-    display: flex;
     overflow-x: auto;
-    width: calc(100% + 100px);
-    padding-left: 50px;
-    margin-left: -50px;
+    padding-left: 10px;
+    margin-left: 0;
     margin-bottom: 30px;
-  }
-  @media (max-width: 480px) {
-    width: calc(100% + 50px);
-    padding-left: 25px;
-    margin-left: -25px;
   }
 
   li {
+    flex: 1 1 auto; 
     &:first-of-type {
       @media (max-width: 600px) {
-        margin-left: 50px;
-      }
-      @media (max-width: 480px) {
-        margin-left: 25px;
+        margin-left: 10px;
       }
     }
     &:last-of-type {
       @media (max-width: 600px) {
-        padding-right: 50px;
-      }
-      @media (max-width: 480px) {
-        padding-right: 25px;
+        padding-right: 10px;
       }
     }
   }
@@ -68,27 +58,27 @@ const StyledTabButton = styled.button`
   ${({ theme }) => theme.mixins.link};
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  min-width: 150px; 
   height: var(--tab-height);
-  padding: 0 20px 2px;
+  padding: 0 10px;
   border-left: 2px solid var(--lightest-navy);
   background-color: transparent;
   color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    padding: 0 15px 2px;
+    padding: 0 10px;
   }
   @media (max-width: 600px) {
-    ${({ theme }) => theme.mixins.flexCenter};
     min-width: 120px;
-    padding: 0 15px;
+    padding: 0 10px;
     border-left: 0;
     border-bottom: 2px solid var(--lightest-navy);
-    text-align: center;
   }
 
   &:hover,
