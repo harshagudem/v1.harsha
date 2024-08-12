@@ -20,6 +20,8 @@ const StyledAboutSection = styled.section`
 `;
 
 const StyledText = styled.div`
+  text-align: justify;
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -47,6 +49,7 @@ const StyledText = styled.div`
     }
   }
 `;
+
 
 const StyledPic = styled.div`
   position: relative;
@@ -159,20 +162,15 @@ const About = () => {
             <p>
               My expertise lies in creating responsive and optimized web applications, ensuring higher user satisfaction 
               and seamless user experiences. During my tenure at Total Infra & Mining Solutions, I implemented React components 
-              and integrated RESTful APIs to enhance usability, contributing to a 40% increase in sales.
+              and integrated RESTful APIs to enhance usability.
             </p>
 
             <p>
               As a Graduate Teaching Assistant at the University of Utah, I have been developing and presenting web application projects, 
-              helping students improve their web development skills by 40%.
+              helping students improve their web development skills.
             </p>
 
-            <p>
-              I am continuously learning and expanding my skill set, which includes a strong foundation in JavaScript, React, Typescript,Node JS 
-              and various front-end frameworks and tools.
-            </p>
-
-            <p>Here are a few of the technologies I've been working with recently:</p>
+            <p>Here are some of the technologies I’ve been actively learning and working with to continuously expand my skill set:</p>
           </div>
 
           <ul className="skills-list">
