@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -32,10 +33,12 @@ const StyledHeroSection = styled.section`
   h3 {
     margin-top: 5px;
     color: var(--slate);
-    line-height: 0.9;
+    line-height: 1.2;
+    text-align: center;
   }
 
   p {
+    text-align: justify;
     margin: 20px 0 0;
     max-width: 540px;
   }
@@ -59,9 +62,23 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const jobTitles = ['Masters in Information Systems', 'Front-end Developer', 'Front-end Engineer', 'Web Developer'];
+  const [text] = useTypewriter({
+    words: jobTitles,
+    loop: true,
+    typeSpeed: 70,
+    deleteSpeed: 50,
+    delaySpeed: 1000,
+  });
+
   const one = <h1>Hi! My Name is</h1>;
   const two = <h2 className="big-heading">Harshavardhan Gudem</h2>;
-  const three = <h3 className="medium-heading">MSIS | Front-end Developer | Front-end Engineer | Web Developer</h3>;
+  const three = (
+    <h3 className="medium-heading">
+      {text}
+      <Cursor cursorStyle="_" />
+    </h3>
+  );
   const four = (
     <>
       <p>
@@ -69,17 +86,15 @@ const Hero = () => {
       </p>
 
       <p>
-        I am Harsha, an alumnus of {' '} <a href="http://www.https://eccles.utah.edu/programs/master-of-science-in-information-systems/.ac.in">
-        University of Utah</a> {' '} and {' '} <a href="https://jntuh.ac.in/">JNTU</a> currently driving innovation in front-end development and web applications. With over two years of experience in software engineering, I specialize in creating responsive and optimized web experiences that significantly enhance user satisfaction.
+        I am Harsha, an alumnus of <a href="http://www.https://eccles.utah.edu/programs/master-of-science-in-information-systems/.ac.in">
+        University of Utah</a> and <a href="https://jntuh.ac.in/">JNTU</a> currently driving innovation in front-end development and web applications. With over two years of experience in software engineering, I specialize in creating responsive and optimized web experiences that significantly enhance user satisfaction.
       </p>
 
-
       <p>
-      When I'm not optimizing web applications and crafting responsive designs, I focus on advancing my front-end and back-end development skills through hands-on projects and continuous learning.
+        When I'm not optimizing web applications and crafting responsive designs, I focus on advancing my front-end and back-end development skills through hands-on projects and continuous learning.
       </p>
     </>
   );
-
 
   const items = [one, two, three, four];
 
