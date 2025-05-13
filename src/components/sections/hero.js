@@ -62,7 +62,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const jobTitles = ['Masters in Information Systems', 'Front-end Developer', 'Front-end Engineer', 'Web Developer'];
+  const jobTitles = ['Masters in Information Systems', 'Software Engineer', 'Backend Developer', 'Backend Engineer', 'Full Stack Developer'];
   const [text] = useTypewriter({
     words: jobTitles,
     loop: true,
@@ -86,13 +86,15 @@ const Hero = () => {
       </p>
 
       <p>
-        I am Harsha, an alumnus of <a href="http://www.https://eccles.utah.edu/programs/master-of-science-in-information-systems/.ac.in">
-        University of Utah</a> and <a href="https://jntuh.ac.in/">JNTU</a> currently driving innovation in front-end development and web applications. With over two years of experience in software engineering, I specialize in creating responsive and optimized web experiences that significantly enhance user satisfaction.
+      I’m Harshavardhan Gudem, a software engineer with nearly 4 years of combined experience in building full-stack web applications, cloud-native systems, and responsive user interfaces.
+
+       I hold a Master’s degree in Information Systems from the <a href="http://www.https://eccles.utah.edu/programs/master-of-science-in-information-systems/.ac.in">
+        University of Utah</a> and a Bachelor’s degree from <a href="https://jntuh.ac.in/">JNTU</a>.
       </p>
 
       <p>
-        When I'm not optimizing web applications and crafting responsive designs, I focus on advancing my front-end and back-end development skills through hands-on projects and continuous learning.
-      </p>
+      My core strength lies in designing and developing scalable, user-centric applications using modern technologies like Java Spring Boot, SQL/NoSQL databases, React.js, TypeScript and AWS services. I’ve contributed to impactful projects in the Accommodation booking, healthcare, and infrastructure domains—delivering solutions that improved system performance, user engagement, and deployment efficiency.      </p>
+      <p>Whether it’s crafting dynamic front-end experiences or architecting efficient back-end APIs, I take a holistic approach to software development—prioritizing clean code, performance, and maintainability. I’m passionate about continuous learning, cloud computing, and solving real-world problems through technology.</p>
     </>
   );
 
