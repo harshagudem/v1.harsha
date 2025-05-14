@@ -155,45 +155,55 @@ const StyledTabPanel = styled.div`
 const Jobs = () => {
   const jobsData = [
     {
-      title: 'Front-End Developer',
-      company: 'CrashPad',
-      location: 'Salt Lake City, UT',
-      range: 'January 2024 - August 2024',
+      title: 'Software Engineer',
+      company: 'Monument Solar',
+      location: 'Salt Lake City, Utah, USA - Remote',
+      range: 'January 2024 – Present',
       url: '',
       description: `
         <ul>
-          <li>Developed a responsive web design and mobile app for booking unique RV accommodations and managing RV properties, incorporating interactive maps, user authentication, and secure payments, resulting in a 50% increase in bookings.</li>
-          <li>Designed and implemented a comprehensive registration and booking management system, ensuring seamless UI/UX and reducing user drop-off by 30%.</li>
-          <li>Collaborated with the backend team using ReactJS, JavaScript, REST APIs, NodeJS, SQL, TypeScript, and Git, enhancing booking management efficiency by 40%.</li>
-          <li>Utilized AWS for web hosting, S3 buckets for media storage, integrated Google Analytics for user insights, implemented JWT for session management, and OAuth for authentication, improving project delivery speed by 25%.</li>
+          <li>Contributed to the development of a comprehensive full-stack Java application connecting travelers with landowners for RV parking, with responsibilities spanning both front-end and back-end development.</li>
+          <li>Led the backend development using Java Spring Boot, focusing on scalable architecture, efficient API design, and integration with Oracle databases to ensure robust data handling.</li>
+          <li>Implemented advanced front-end features using React and TypeScript, including dynamic listing views with pagination, interactive maps, and responsive UIs, enhancing user engagement and satisfaction.</li>
+          <li>Designed and optimized RESTful APIs and executed complex queries with SQL database, supporting high-volume transactions and ensuring application performance.</li>
+          <li>Maintained SQL schemas, optimizing data access through efficient query execution and indexing strategies.</li>
+          <li>Leveraged AWS services for web hosting and S3 buckets for media storage, implemented JWT for session management and OAuth for authentication, and utilized Google Analytics to gather user insights. Documented the project using Confluence for streamlined collaboration.</li>
+          <li>Coordinated extensive testing phases using Postman and implemented a CI/CD pipeline for efficient deployment, ensuring the application met all functional and security standards before launch.</li>
+          <li>Actively participated in Agile development cycles and utilized Confluence for technical documentation, accelerating feature delivery by 25% and improving cross-team collaboration.</li>
         </ul>
       `,
     },
     {
-      title: 'Graduate Teaching Assistant',
+      title: 'Developer Intern',
       company: 'University of Utah',
-      location: 'Salt Lake City, UT',
-      range: 'August 2023 - Present',
+      location: 'Salt Lake City, Utah, USA',
+      range: 'August 2023 – August 2024',
       url: 'https://www.utah.edu',
       description: `
         <ul>
-          <li>Assisting in teaching web development courses, providing support to students in mastering modern web technologies.</li>
-          <li>Developed and presented projects that enhanced students' skills, resulting in a 40% improvement in overall performance.</li>
+          <li>Developed dynamic user interfaces for patient portals and administrative dashboards using ReactJS, Redux, and Tailwind CSS, enhancing usability for 80,000+ healthcare users and increasing user satisfaction by 20%.</li>
+          <li>Translated wireframes and mockups into high-quality interactive web pages while adhering to modern UI/UX standards, improving accessibility compliance by 25%.</li>
+          <li>Tested and debugged UI components for cross-browser compatibility and responsiveness, achieving 99.9% uptime and enabling uninterrupted healthcare workflows.</li>
+          <li>Actively contributed to Agile development cycles, delivering iterative updates and enhancements aligned with project goals, ensuring timely feature releases.</li>
         </ul>
       `,
     },
-   
     {
       title: 'Software Engineer',
       company: 'Total Infra & Mining Solutions',
       location: 'Hyderabad, India',
-      range: 'June 2018 - June 2020',
+      range: 'November 2021 – July 2023',
       url: 'https://www.total24x7.com/shop/',
       description: `
         <ul>
-          <li>Developed and maintained responsive web applications using React and Node.js.</li>
-          <li>Improved system performance by optimizing front-end components, leading to a 40% increase in sales.</li>
-          <li>Collaborated with cross-functional teams to define and implement innovative solutions for improved user experience.</li>
+          <li>Engineered scalable backend services for an internal procurement management system using Java, Spring Boot, and Hibernate, enhancing transaction throughput and improving backend processing performance by 20%.</li>
+          <li>Designed and developed robust RESTful APIs for procurement workflows, vendor management, and approval systems, achieving a 30% reduction in response times through efficient service-layer optimizations.</li>
+          <li>Modeled and optimized complex database schemas in Oracle Database, leveraging PL/SQL for stored procedures and triggers to handle business-critical logic and ensuring high-performance data operations.</li>
+          <li>Secured APIs and backend systems using Spring Security with OAuth 2.0 and Role-Based Access Control (RBAC), ensuring compliance with enterprise-grade access control requirements.</li>
+          <li>Containerized backend services using Docker to create consistent development, staging, and production environments, and implemented environment-specific configurations for Oracle integration.</li>
+          <li>Streamlined CI/CD pipelines using Jenkins, integrated with Maven, Docker, and Kubernetes, reducing manual intervention and increasing deployment reliability by 50%.</li>
+          <li>Deployed services on AWS EC2 and managed static assets with S3, supporting a reliable and scalable cloud infrastructure.</li>
+          <li>Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, code reviews, and backend performance audits to drive continuous improvement and scalability.</li>
         </ul>
       `,
     },
@@ -201,16 +211,17 @@ const Jobs = () => {
       title: 'Information Technology Intern',
       company: 'South Central Railway',
       location: 'India',
-      range: 'June 2020 - January 2021',
+      range: 'June 2020 – January 2021',
       url: 'https://scr.indianrailways.gov.in/',
       description: `
         <ul>
-          <li>Contributed significantly to the creation and upkeep of responsive front-end design user interfaces for a mobile railway ticketing system, using HTML, CSS, and modern JavaScript concepts, resulting in a 35% improvement in system responsiveness and user satisfaction.</li>
-          <li>Provided frontline support to colleagues, identifying problems and assisting with technical troubleshooting, bug fix analysis, and frontend-related issues. Conducted seminars on safe internet practices, leading to a 25% reduction in frontend-related incidents.</li>
+          <li>Developed and maintained responsive front-end user interfaces for a mobile railway ticketing system using HTML, CSS, and modern JavaScript concepts, improving system responsiveness and user satisfaction by 35%.</li>
+          <li>Provided frontline support and technical troubleshooting for UI navigation and performance optimizations, resolving issues efficiently and enhancing team collaboration.</li>
         </ul>
       `,
     },
   ];
+  
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);

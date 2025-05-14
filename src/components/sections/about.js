@@ -131,20 +131,33 @@ const About = () => {
   }, []);
 
   const skills = [
-    'JavaScript', 
-    'React', 
-    'TypeScript', 
-    'Node.js',
-    'HTML', 
-    'CSS',
-    'Tailwind CSS', 
-    'WordPress',
-    'MongoDB', 
-    'MySQL', 
-    'Git',
-    'AWS', 
-    'UI/UX Design'
+    'Java',
+    'Spring Boot',
+    'RESTful APIs',
+    'Microservices',
+    'Hibernate',
+    'SQL',
+    'Oracle Database',
+    'MySQL',
+    'PL/SQL',
+    'MongoDB',
+    'ReactJs',
+    'TypeScript',
+    'Redux','JavaScript',
+    'Tailwind CSS',
+    'Apache Kafka',
+    'Docker',
+    'Jenkins',
+    'AWS (EC2, S3, LB)',
+    'JWT & OAuth 2.0',
+    'CI/CD Pipelines',
+    'Git & GitHub',
+    'Postman',
+    'Linux Shell Scripting',
+    'System Design',
+    'Data Structures & Algorithms'
   ];
+  
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -154,21 +167,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              I'm Harshavardhan Gudem, a software engineer with over 2 years of experience in front-end development and web applications. 
-              I have led projects utilizing modern front-end technologies and have developed key internal software applications, 
-              resulting in significant performance enhancements.
+            I’m Harshavardhan Gudem, a Software Engineer with a deep passion for building scalable, secure, and high-performance systems. With professional experience across industries like Travel & Accommodation, and enterprise solutions, I specialize in designing and developing robust backend architectures using Java, Spring Boot, and SQL/NoSQL databases.
             </p>
 
             <p>
-              My expertise lies in creating responsive and optimized web applications, ensuring higher user satisfaction 
-              and seamless user experiences. During my tenure at Total Infra & Mining Solutions, I implemented React components 
-              and integrated RESTful APIs to enhance usability.
+             My core expertise lies in RESTful API development, microservices architecture, database modeling (Oracle, MySQL), and backend optimization for performance and security. I’ve led backend efforts in several full-stack projects—handling everything from complex business logic and data processing to API integration and deployment pipelines using CI/CD tools like Jenkins and Docker.
             </p>
 
             <p>
-              As a Graduate Teaching Assistant at the University of Utah, I have been developing and presenting web application projects, 
-              helping students improve their web development skills.
+            I'm also proficient in implementing authentication systems (JWT, OAuth 2.0), role-based access control, and cloud deployments using AWS (EC2, S3, Elastic Load Balancing). With a strong foundation in data structures, algorithms, and system design, I consistently aim to deliver backend systems that are not only functional but scalable and maintainable.
             </p>
+            <p>Driven by a problem-solving mindset and a commitment to continuous improvement, I’m eager to contribute to backend-intensive software projects that demand reliability, efficiency, and technical depth.</p>
 
             <p>Here are some of the technologies I’ve been actively learning and working with to continuously expand my skill set:</p>
           </div>
@@ -182,7 +191,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/ProfileImage.png"
+              src="../../images/Profile Pic.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

@@ -92,9 +92,9 @@ const Hero = () => {
         University of Utah</a> and a Bachelor’s degree from <a href="https://jntuh.ac.in/">JNTU</a>.
       </p>
 
-      <p>
+       <p>
       My core strength lies in designing and developing scalable, user-centric applications using modern technologies like Java Spring Boot, SQL/NoSQL databases, React.js, TypeScript and AWS services. I’ve contributed to impactful projects in the Accommodation booking, healthcare, and infrastructure domains—delivering solutions that improved system performance, user engagement, and deployment efficiency.      </p>
-      <p>Whether it’s crafting dynamic front-end experiences or architecting efficient back-end APIs, I take a holistic approach to software development—prioritizing clean code, performance, and maintainability. I’m passionate about continuous learning, cloud computing, and solving real-world problems through technology.</p>
+      
     </>
   );
 
