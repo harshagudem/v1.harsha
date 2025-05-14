@@ -139,8 +139,6 @@ const About = () => {
     'SQL',
     'Oracle Database',
     'MySQL',
-    'PL/SQL',
-    'MongoDB',
     'ReactJs',
     'TypeScript',
     'Redux','JavaScript',
@@ -153,7 +151,6 @@ const About = () => {
     'CI/CD Pipelines',
     'Git & GitHub',
     'Postman',
-    'Linux Shell Scripting',
     'System Design',
     'Data Structures & Algorithms'
   ];
