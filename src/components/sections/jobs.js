@@ -163,7 +163,7 @@ const Jobs = () => {
       description: `
         <ul>
           <li>Contributed to the development of a comprehensive full-stack Java application connecting travelers with landowners for RV parking, with responsibilities spanning both front-end and back-end development.</li>
-          <li>Led the backend development using Java Spring Boot, focusing on scalable architecture, efficient API design, and integration with Oracle databases to ensure robust data handling.</li>
+          <li>Led the backend development using Java Spring Boot, focusing on scalable architecture, efficient API design, and integration with databases to ensure robust data handling.</li>
           <li>Implemented advanced front-end features using React and TypeScript, including dynamic listing views with pagination, interactive maps, and responsive UIs, enhancing user engagement and satisfaction.</li>
           <li>Designed and optimized RESTful APIs and executed complex queries with SQL database, supporting high-volume transactions and ensuring application performance.</li>
           <li>Maintained SQL schemas, optimizing data access through efficient query execution and indexing strategies.</li>
