@@ -156,35 +156,59 @@ const Jobs = () => {
   const jobsData = [
     {
       title: 'Software Engineer',
-      company: 'Monument Solar',
+      company: 'Pagoda Tree Education Ltd',
       location: 'Salt Lake City, Utah, USA - Remote',
-      range: 'January 2024 – Present',
+      range: 'June 2025 – Present',
       url: '',
       description: `
         <ul>
-          <li>Contributed to the development of a comprehensive full-stack Java application connecting travelers with landowners for RV parking, with responsibilities spanning both front-end and back-end development.</li>
-          <li>Led the backend development using Java Spring Boot, focusing on scalable architecture, efficient API design, and integration with databases to ensure robust data handling.</li>
-          <li>Implemented advanced front-end features using React and TypeScript, including dynamic listing views with pagination, interactive maps, and responsive UIs, enhancing user engagement and satisfaction.</li>
-          <li>Designed and optimized RESTful APIs and executed complex queries with SQL database, supporting high-volume transactions and ensuring application performance.</li>
-          <li>Maintained SQL schemas, optimizing data access through efficient query execution and indexing strategies.</li>
-          <li>Leveraged AWS services for web hosting and S3 buckets for media storage, implemented JWT for session management and OAuth for authentication, and utilized Google Analytics to gather user insights. Documented the project using Confluence for streamlined collaboration.</li>
-          <li>Coordinated extensive testing phases using Postman and implemented a CI/CD pipeline for efficient deployment, ensuring the application met all functional and security standards before launch.</li>
-          <li>Actively participated in Agile development cycles and utilized Confluence for technical documentation, accelerating feature delivery by 25% and improving cross-team collaboration.</li>
-        </ul>
+  <li>Migrated a monolithic WordPress education site into a React + Spring Boot microservices architecture, eliminating bottlenecks and improving feature delivery cycles by 40%, enabling faster innovation and maintainability.</li>
+  <li>Engineered and deployed RESTful APIs with Spring Boot and PostgreSQL, introducing indexing and caching that reduced API response latency by 35% and improved data consistency across modules.</li>
+  <li>Built and deployed a student-facing AI chatbot using LLM-based APIs, enabling real-time Q&amp;A, course tracking, and personalized study support. Improved student engagement and retention by providing always-available assistance.</li>
+  <li>Rebuilt key user-facing modules (registration, course enrollment, payment flows) using React, Redux, Tailwind CSS, resulting in a 25% uplift in satisfaction scores measured by session duration and reduced bounce rates.</li>
+  <li>Containerized services with Docker and deployed on AWS EKS (Kubernetes), achieving 99.9% uptime and enabling zero-downtime releases through rolling updates and blue/green strategies.</li>
+  <li>Designed secure PostgreSQL schemas and automated migration from MySQL, improving database performance by 30%.</li>
+  <li>Built CI/CD pipelines with GitHub Actions, automating builds, tests, and deployments to cut deployment time from hours to minutes, boosting developer velocity.</li>
+  <li>Implemented OAuth2 and JWT authentication for robust identity and access management, strengthening compliance with industry security standards.</li>
+  <li>Collaborated in Agile ceremonies, improving sprint predictability and accelerating feature delivery by 20%.</li>
+</ul>
       `,
     },
     {
-      title: 'Developer Intern',
+      title: 'Software Engineer',
+      company: 'Monument Solar',
+      location: 'Salt Lake City, Utah, USA - Remote',
+      range: 'January 2024 – June 2025',
+      url: '',
+      description: `
+        <ul>
+  <li><strong>Crashpad:</strong> Consumer web platform connecting RV travelers with private landowners.</li>
+  <li>Designed and scaled Crashpad, a full-stack booking platform built with Spring Boot, Oracle DB, and React, onboarding 15,000+ active users within six months and proving scalability of a new consumer-facing product.</li>
+  <li>Engineered high-performance REST APIs for bookings and transactions, applying indexing, query tuning, and pagination to cut backend latency by 30% and ensure smooth user experience.</li>
+  <li>Built map-based search, interactive listings, and dynamic filters using React, Redux Toolkit, and Leaflet.js, improving navigation and boosting booking conversions by 22%.</li>
+  <li>Implemented secure authentication and role-based access control with OAuth2 + JWT, reducing unauthorized access incidents by 90% and ensuring user trust.</li>
+  <li>Automated deployments with AWS (EC2, S3), Kubernetes, and Helm, achieving 99.9% uptime and ensuring zero rollback failures across environments.</li>
+  <li>Built CI/CD pipelines (Jenkins + GitHub Actions) with automated testing and observability checks, reducing release cycles by 60% and increasing deployment reliability.</li>
+  <li>Delivered a property and booking management system with audit logging, lowering admin errors by 40% and improving operational transparency.</li>
+  <li>Documented APIs and workflows in Confluence and Postman, improving onboarding speed and collaboration by 25%.</li>
+</ul>
+
+      `,
+    },
+    {
+      title: 'Teaching Assistant (TA)',
       company: 'University of Utah',
       location: 'Salt Lake City, Utah, USA',
       range: 'August 2023 – August 2024',
       url: 'https://www.utah.edu',
       description: `
         <ul>
-          <li>Developed dynamic user interfaces for patient portals and administrative dashboards using ReactJS, Redux, and Tailwind CSS, enhancing usability for 80,000+ healthcare users and increasing user satisfaction by 20%.</li>
-          <li>Translated wireframes and mockups into high-quality interactive web pages while adhering to modern UI/UX standards, improving accessibility compliance by 25%.</li>
-          <li>Tested and debugged UI components for cross-browser compatibility and responsiveness, achieving 99.9% uptime and enabling uninterrupted healthcare workflows.</li>
-          <li>Actively contributed to Agile development cycles, delivering iterative updates and enhancements aligned with project goals, ensuring timely feature releases.</li>
+          <li>Assisted in delivery of courses on Java, REST APIs, SQL, and SDLC practices to 100+ students across 3 semesters, reinforcing industry-ready development skills</li>
+          <li>Facilitated weekly coding labs and debugging workshops, increasing assignment completion rates by 25%</li>
+          <li>Provided over 300 one-on-one support sessions, clarifying API design, database normalization, and debugging strategies</li>
+          <li>Graded and reviewed capstone projects, providing feedback that improved student code quality and testability by 20%.</li>
+          <li>Mentored students on Git workflows and Agile, 80% reported higher confidence in production-grade development.</li>
+
         </ul>
       `,
     },
@@ -195,16 +219,16 @@ const Jobs = () => {
       range: 'November 2021 – July 2023',
       url: 'https://www.total24x7.com/shop/',
       description: `
-        <ul>
-          <li>Engineered scalable backend services for an internal procurement management system using Java, Spring Boot, and Hibernate, enhancing transaction throughput and improving backend processing performance by 20%.</li>
-          <li>Designed and developed robust RESTful APIs for procurement workflows, vendor management, and approval systems, achieving a 30% reduction in response times through efficient service-layer optimizations.</li>
-          <li>Modeled and optimized complex database schemas in Oracle Database, leveraging PL/SQL for stored procedures and triggers to handle business-critical logic and ensuring high-performance data operations.</li>
-          <li>Secured APIs and backend systems using Spring Security with OAuth 2.0 and Role-Based Access Control (RBAC), ensuring compliance with enterprise-grade access control requirements.</li>
-          <li>Containerized backend services using Docker to create consistent development, staging, and production environments, and implemented environment-specific configurations for Oracle integration.</li>
-          <li>Streamlined CI/CD pipelines using Jenkins, integrated with Maven, Docker, and Kubernetes, reducing manual intervention and increasing deployment reliability by 50%.</li>
-          <li>Deployed services on AWS EC2 and managed static assets with S3, supporting a reliable and scalable cloud infrastructure.</li>
-          <li>Collaborated with cross-functional teams using Agile methodologies, participating in sprint planning, code reviews, and backend performance audits to drive continuous improvement and scalability.</li>
-        </ul>
+       <ul>
+  <li>Developed backend services for a procurement management platform using Java, Spring Boot, and Hibernate, improving throughput by 20% and reducing processing delays.</li>
+  <li>Built secure REST APIs for procurement workflows and vendor systems, with service-layer optimizations that cut response times by 30%, enhancing user efficiency.</li>
+  <li>Modeled and optimized schemas in Oracle DB with PL/SQL procedures and triggers, ensuring reliable high-volume data transactions.</li>
+  <li>Implemented enterprise-grade security with Spring Security (OAuth2, RBAC), preventing unauthorized access and ensuring compliance with IT controls.</li>
+  <li>Containerized services with Docker and deployed to AWS EC2/S3, reducing environment drift and deployment failures.</li>
+  <li>Automated CI/CD pipelines in Jenkins (integrated with Maven, Docker, Kubernetes), reducing manual intervention and increasing release reliability by 50%.</li>
+  <li>Collaborated in Agile sprints, code reviews, and backend performance audits, driving continuous improvement in scalability and reliability.</li>
+</ul>
+
       `,
     },
     {
